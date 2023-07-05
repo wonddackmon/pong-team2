@@ -20,9 +20,11 @@ class Pong:
     # MEMBER-3/4
     # player move functions
     def playerL_up(self):
+        self.playerL.pos[1]+=10
         writer.clear(); writer.write("playerL_up"+str(self.playerL.pos))
 
     def playerR_up(self):
+        self.playerR.pos[1]+=10
         writer.clear(); writer.write("playerR_up"+str(self.playerR.pos))
 
     def playerL_down(self):
