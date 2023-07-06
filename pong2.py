@@ -72,6 +72,7 @@ class Pong:
         # ...
         if self.ball.pos[1] >= 250 or self.ball.pos[1] <= -1 * 250:
             self.ball.dy *= -1
+            
             return True
         return False
 
