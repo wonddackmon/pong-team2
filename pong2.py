@@ -47,7 +47,7 @@ class Pong:
             if self.process_fall():
                 game_end = True
             else:
-                self.process_border_hit()
+                game_end = self.process_border_hit()
         return game_end
 
     # MEMBER 3
