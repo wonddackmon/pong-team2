@@ -47,7 +47,7 @@ class Pong:
             if self.process_fall():
                 game_end = True
             else:
-                self.process_border_hit()
+                game_end = self.process_border_hit()
         return game_end
 
     # MEMBER 3
@@ -70,6 +70,10 @@ class Pong:
         # border-hit occurs when ball moves beyond 250 (or -250) along y-axis
         # if a border-hit is detected, return True and reverse the ball direction along y-axis
         # ...
+        if self.ball.pos[1] >= 250 or self.ball.pos[1] <= -1 * 250:
+            self.ball.dy *= -1
+            
+            return True
         return False
 
 
